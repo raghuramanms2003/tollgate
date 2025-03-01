@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toll Gate Management System</title>
+    <title>Toll Gate Management</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1 class="title">🚦 Toll Gate Management System 🚦</h1>
+      <h1>🚦 Toll Gate Management 🚦</h1>
 
-      <!-- Light/Dark Mode Toggle -->
+      <!-- Light/Dark Mode -->
       <button id="themeToggle" class="toggle-button">
         🌙 Switch to Light Mode
       </button>
@@ -44,33 +42,20 @@
         </select>
       </div>
 
-      <button onclick="processPayment()" class="pay-button">💰 Pay Toll</button>
-
-      <!-- Receipt Section -->
-      <div id="receipt" class="hidden receipt-card">
-        <h2>🧾 Toll Receipt</h2>
-        <p id="receiptDetails"></p>
-        <canvas id="qrCodeCanvas" class="hidden"></canvas>
-        <button onclick="downloadReceipt()" class="download-button">
-          📄 Download PDF
-        </button>
-      </div>
-
-      <!-- Toll History -->
-      <div class="card">
-        <h3>📜 Last 5 Transactions</h3>
-        <ul id="tollHistory"></ul>
-      </div>
-
-      <!-- Toll Gate Image -->
-      <div class="gate-container">
-        <img
-          id="gateImage"
-          src="https://media.istockphoto.com/id/182475239/photo/turnpike-toll.jpg?s=2048x2048&w=is&k=20&c=kjthA4VpTTahNZ-nMRR3lXqoULLkOM0IC5bqS5ztgaI="
-          class="gate-image"
-        />
-      </div>
+      <!-- Buttons -->
+      <button onclick="openPaymentPage()" class="pay-button">
+        💰 Pay Toll
+      </button>
+      <button onclick="openTransactionHistory()" class="history-button">
+        📜 Transaction History
+      </button>
     </div>
+
+    <script>
+      checkLogin(); // Ensure user is logged in before accessing
+    </script>
+
+    <button onclick="logout()">Logout</button>
 
     <script src="script.js"></script>
   </body>

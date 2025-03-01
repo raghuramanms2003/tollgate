@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>📜 Last 5 Transactions</h2>
+      <ul id="tollHistory"></ul>
+    </div>
+
+    <script>
+      document.getElementById("tollHistory").innerHTML = JSON.parse(
+        localStorage.getItem("tollHistory") || "[]"
+      )
+        .map((item) => `<li>${item}</li>`)
+        .join("");
+    </script>
+  </body>
+</html>

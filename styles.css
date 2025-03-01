@@ -25,70 +25,26 @@ body {
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Light Mode for Container */
+/* Buttons */
+.pay-button,
+.history-button,
+.toggle-button {
+  background-color: #e94560;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+}
+
 .light-mode .container {
   background: #ffffff;
   color: black;
 }
 
-/* Dropdowns */
-select,
-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #0f3460;
-  color: white;
-}
-
-/* Light Mode for Dropdowns */
-.light-mode select,
-.light-mode input {
-  background-color: #e0e0e0;
-  color: black;
-}
-
-/* Buttons */
-.pay-button,
-.toggle-button,
-.download-button {
-  background-color: #e94560;
-  color: white;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.toggle-button:hover {
-  background-color: #ff5c7a;
-}
-
-/* Hidden Elements */
-.hidden {
-  display: none;
-}
-
-/* Toll Gate Image */
-.gate-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.gate-image {
-  width: 300px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-
-/* Light Mode for Image */
-.light-mode .gate-image {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Hide the image when payment is done */
-.hidden {
-  display: none;
+.light-mode .pay-button,
+.light-mode .history-button {
+  background-color: #007bff;
 }
